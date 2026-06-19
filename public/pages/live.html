@@ -1,65 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
-href="../css/style.css">
-<title>Create Stream</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Fredo Live - Setup Broadcast</title>
 </head>
 
 <body>
 
 <div class="container">
+    <div class="card">
+        <h2>🎥 Setup Live Stream</h2>
+        
+        <input id="title" placeholder="Stream title">
+        <textarea id="description" placeholder="Description" style="width:100%; min-height:80px; padding:12px; border-radius:8px; margin-top:10px; background:#111726; color:white; border:1px solid #334155; font-family:inherit;"></textarea>
 
-<div class="card">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:10px;">
+            <select id="category" style="padding:12px; border-radius:8px; background:#111726; color:white; border:1px solid #334155;">
+                <option>Coding</option>
+                <option>Education</option>
+                <option>Gaming</option>
+                <option>Music</option>
+                <option>General</option>
+            </select>
 
-<h2>🎥 Create Live Stream</h2>
+            <select id="privacy" style="padding:12px; border-radius:8px; background:#111726; color:white; border:1px solid #334155;">
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+            </select>
+        </div>
 
-<input
-id="title"
-placeholder="Stream title">
+        <input id="duration" placeholder="Expected duration">
 
-<textarea
-id="description"
-placeholder="Description"></textarea>
-
-<select id="category">
-<option>Coding</option>
-<option>Education</option>
-<option>Gaming</option>
-<option>Music</option>
-<option>General</option>
-</select>
-
-<input
-id="duration"
-placeholder="Expected duration">
-
-<select id="privacy">
-<option value="public">
-Public
-</option>
-
-<option value="private">
-Private
-</option>
-</select>
-
-<button
-class="btn"
-onclick="createStream()">
-
-Create Stream
-
-</button>
-
+        <button class="btn" onclick="createStream()">Create Stream</button>
+    </div>
 </div>
 
-</div>
-
-<script type="module"
-src="../js/live.js"></script>
+<script type="module" src="../js/live.js"></script>
 
 </body>
 </html>
